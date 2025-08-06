@@ -55,7 +55,7 @@ async function getsong(folder) {
 
 
     curfolder = folder;
-    let a = await fetch(``${config.apiBaseUrl}/song/${folder}/``)
+    let a = await fetch(`${config.apiBaseUrl}/song/${folder}/`)
     let response = await a.text()
 
     let div = document.createElement('div')
@@ -340,6 +340,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
