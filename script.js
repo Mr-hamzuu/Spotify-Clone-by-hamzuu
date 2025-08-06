@@ -150,8 +150,8 @@ let playmusic = (track, paused = false) => {
 }
 
 async function main() {
-    pics = await picsreturn("NFAK");
-    songs = await getsong("NFAK");
+    pics = await picsreturn("nfak");
+    songs = await getsong("nfak");
     playmusic(songs[0], true)
 
 
@@ -332,6 +332,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
