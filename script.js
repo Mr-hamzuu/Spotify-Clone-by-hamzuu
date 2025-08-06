@@ -257,7 +257,7 @@ async function main() {
     // Attach click event listeners to each card**********************************************************************
     Array.from(document.getElementsByClassName("r-card")).forEach((e) => {
         e.addEventListener("click", async (item) => {
-             folder = item.currentTarget.dataset.folder;
+         let folder = item.currentTarget.dataset.folder;
           console.log("Folder selected:", folder);
          
             
@@ -338,6 +338,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
