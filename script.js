@@ -1,10 +1,11 @@
 
 
 const config = {
-  apiBaseUrl: window.location.hostname === 'localhost' 
-    ? 'http://localhost:5500' 
+  apiBaseUrl: window.location.hostname === 'localhost'
+    ? 'http://localhost:5500'
     : '' // Empty string for same-origin in production
 };
+
 
 let currentsong = new Audio();
 let curfolder;
@@ -339,6 +340,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
