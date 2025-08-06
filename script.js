@@ -1,9 +1,3 @@
-const config = {
-  apiBaseUrl: window.location.hostname === 'localhost' 
-    ? 'http://localhost:5500' 
-    : '' // Empty string for same-origin in production
-};
-
 
 let currentsong = new Audio();
 let curfolder;
@@ -53,7 +47,7 @@ async function getsong(folder) {
 
 
     curfolder = folder;
-    let a = await fetch(`${config.apiBaseUrl}/song/${folder}/`)
+    let a = await fetch(`/song/${folder}/`)
     let response = await a.text()
 
     let div = document.createElement('div')
@@ -117,7 +111,7 @@ async function getsong(folder) {
 
 // Pic portion
 async function picsreturn(images) {
-    let pics = await fetch(`${config.apiBaseUrl}/assits/${images}/`)
+    let pics = await fetch(`/assits/${images}/`)
     let picsreponse = await pics.text()
     let divpic = document.createElement('div')
     divpic.innerHTML = picsreponse;
@@ -338,6 +332,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
