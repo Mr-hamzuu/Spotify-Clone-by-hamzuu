@@ -1,0 +1,344 @@
+:root {
+  --background-color: #212121;
+  --text-color: white;
+  --first-color: #535353;
+  --second-color: #b3b3b3;
+  --hover-color: #2d2d2d;
+  --green: #1db954;
+}
+
+@media (max-width: 576px) {
+  .homelogo{
+    display: none;
+  }
+  .web_name{
+    display: flex;
+}
+  .search input{
+    width: 100px;
+    border: none;
+    
+  }
+  .search {
+        padding: 5px 10px;
+  }
+   .search svg{
+    width: 21px;
+   }
+.search_store_svg{
+  display: none;
+}
+  .search-mbl {
+    display: none;
+  }
+
+  header {
+    width: 100%;
+    justify-content: space-evenly;
+  
+  }
+.cross_btn{
+    display: block;
+}
+  header svg {
+    width: 31px;
+  }
+
+  header .two button {
+    font-size: 9px !important;
+    padding: 4px;
+  }
+
+  header .two .text {
+    font-size: 9px !important;
+  }
+
+  .two li {
+    margin: 3px;
+  }
+
+ .tablet_menu {
+  display: flex;
+  flex-direction: column;
+    transition: all .5s ease;
+    position: fixed;
+    right: -254px;
+    padding: 12px;
+    z-index: 10000;
+    height: 100vh;
+    width: 250px;
+    background-color: #212121bc;
+    backdrop-filter: blur(10px);
+    padding-top: 93px;
+    box-shadow: -5px 0px 15px -9px var(--second-color);
+  }
+
+  .tablet_menu li a {
+    transition: color .5s ease;
+     text-decoration: none;
+  }
+
+  .tablet_menu li:hover a {
+    color: var(--green);
+    text-decoration: underline;
+  }
+
+  .tablet_menu li {
+    list-style: none;
+    padding: 8px;
+
+  }
+
+  .tablet_menu button {
+    position: absolute;
+    top: 23px;
+    border: none;
+    background-color: var(--background-color);
+  }
+
+
+
+  .two {
+    display: none;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+    height: 200vh !important;
+  }
+
+  .three_line{
+    display: flex;
+}
+  aside {
+    width: 97%;
+    position: absolute;
+    top: 71px;
+    z-index: 10000;
+    left: -564px;
+    background-color: var(--background-color);
+    height: 100%;
+    border-radius: 6px;
+    margin: 4px;
+    padding: 12px;
+    transition: all .5s ease;
+  }
+
+  .left-library button {
+    display: block;
+    position: fixed;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  .library {
+    position: relative;
+    left: -130px;
+    transition: all .5s ease;
+  }
+
+  .side-icon {
+    display: block;
+    align-items: center;
+    transition: all .5s ease;
+    position: relative;
+    left: 165px;
+    top: 38px;
+  }
+
+  .side-icon svg {
+    width: 14px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .song-cards {
+    overflow-x: auto;
+    border: none;
+    border-radius: 8px;
+    box-shadow:inset 0px 0px 11px 1px #b3b3b311;
+  }
+
+  .r-img {
+    width: 120px;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0%;
+    justify-self: center;
+    background-color: #212121a2;
+    backdrop-filter: blur(8px);
+    width: 80%;
+    border-radius: 13px;
+    margin: 23px;
+    height: 17vh;
+    padding: 5px;
+    z-index: 5000000;
+    box-shadow: 0px 0px 11px 1px var(--green);
+
+
+  }
+.music{
+  margin-top: 22px;
+}
+  .buttons {
+    padding: 0px;
+  }
+
+  .control_sec {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+  }
+
+  .seekbar {
+    margin: 12px auto;
+    width: 74%;
+  }
+  
+
+  .songinfo {
+    /* position: absolute;
+    left: 13px;
+    bottom: 59px;
+    width: 119px; */
+    color: var(--green);
+    font-size: 12px;
+
+  }
+
+  .songinfo marquee {
+    color: var(--text-color);
+
+  }
+
+  .songtime {
+    /* position: absolute;
+    right: 30px;
+    bottom: 59px; */
+    color: var(--text-color);
+    font-size: 12px;
+
+  }
+}
+
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+
+  .tablet_menu {
+    transition: all .5s ease;
+    position: fixed;
+    right: -254px;
+    padding: 12px;
+    z-index: 10000;
+    height: 100vh;
+    width: 250px;
+    background-color: #212121bc;
+    backdrop-filter: blur(10px);
+    padding-top: 93px;
+    box-shadow: -5px 0px 15px -9px var(--second-color);
+  }
+
+  .tablet_menu li a {
+    transition: color .5s ease;
+     text-decoration: none;
+  }
+
+  .tablet_menu li:hover a {
+    color: var(--green);
+    text-decoration: underline;
+  }
+
+  .tablet_menu li {
+    list-style: none;
+    padding: 8px;
+
+  }
+
+  .tablet_menu button {
+    position: absolute;
+    top: 23px;
+    border: none;
+    background-color: var(--background-color);
+  }
+
+ 
+
+  .two {
+    display: none;
+  }
+
+  .section1 {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 0px;
+    height: 120vh !important;
+  }
+
+    .three_line{
+    display: flex;
+} 
+  aside {
+
+    width: 50%;
+    position: absolute;
+    top: 71px;
+    z-index: 10000;
+    left: -13px;
+    background-color: #212121bc;
+    backdrop-filter: blur(10px);
+    height: 100%;
+    border-radius: 6px;
+    margin: 4px;
+    padding: 12px;
+    transition: all .5s ease;
+    box-shadow: 5px 0px 15px -9px var(--second-color);
+  }
+.cross_btn{
+    display: block;
+}
+  .left-library button {
+    display: block;
+    position: fixed;
+    left: 0px;
+    cursor: pointer;
+  }
+
+  .library {
+    position: relative;
+    left: -130px;
+    transition: all .5s ease;
+  }
+
+  .side-icon {
+    display: block;
+    align-items: center;
+    transition: all .5s ease;
+    position: relative;
+    left: 165px;
+    top: 38px;
+  }
+
+  .side-icon svg {
+    width: 14px;
+  }
+
+  main {
+    width: 100%;
+  }
+
+  .song-cards {
+    overflow-x: auto;
+  }
+
+  .r-img {
+    width: 120px;
+  }
+
+}

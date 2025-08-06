@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify by hamzuu</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="media.css">
+    <link rel="icon" sizes="32x32" type="image/png" href="favicon.png">
+</head>
+
+<body>
+
+    <ul class="tablet_menu">
+        <button><svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18 6 L6 18 M6 6 L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+
+            </svg></button>
+
+        <li> <a href="#"> Explore Premium</a></li>
+        <li> <a href="#"> Install App</a></li>
+        <li> <a href="#">Join Community</a></li>
+    </ul>
+
+    <header>
+        <ul class="one">
+
+            <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24"
+                        class="e-91000-logo e-91000-baseline" aria-label="Spotify" aria-hidden="false" fill="white"
+                        height="32" data-encore-id="logoSpotify"
+                        style="--encore-logo-fill-color: var(--decorative-base);">
+                        <title>Spotify</title>
+                        <path
+                            d="M13.427.01C6.805-.253 1.224 4.902.961 11.524.698 18.147 5.853 23.728 12.476 23.99c6.622.263 12.203-4.892 12.466-11.514S20.049.272 13.427.01m5.066 17.579a.717.717 0 0 1-.977.268 14.4 14.4 0 0 0-5.138-1.747 14.4 14.4 0 0 0-5.42.263.717.717 0 0 1-.338-1.392c1.95-.474 3.955-.571 5.958-.29 2.003.282 3.903.928 5.647 1.92a.717.717 0 0 1 .268.978m1.577-3.15a.93.93 0 0 1-1.262.376 17.7 17.7 0 0 0-5.972-1.96 17.7 17.7 0 0 0-6.281.238.93.93 0 0 1-1.11-.71.93.93 0 0 1 .71-1.11 19.5 19.5 0 0 1 6.94-.262 19.5 19.5 0 0 1 6.599 2.165c.452.245.62.81.376 1.263m1.748-3.551a1.147 1.147 0 0 1-1.546.488 21.4 21.4 0 0 0-6.918-2.208 21.4 21.4 0 0 0-7.259.215 1.146 1.146 0 0 1-.456-2.246 23.7 23.7 0 0 1 8.034-.24 23.7 23.7 0 0 1 7.657 2.445c.561.292.78.984.488 1.546m13.612-.036-.832-.247c-1.67-.495-2.14-.681-2.14-1.353 0-.637.708-1.327 2.264-1.327 1.539 0 2.839.752 3.51 1.31.116.096.24.052.24-.098V6.935c0-.097-.027-.15-.098-.203-.83-.62-2.272-1.07-3.723-1.07-2.953 0-4.722 1.68-4.722 3.59 0 2.157 1.371 2.91 3.626 3.546l.973.274c1.689.478 1.998.902 1.998 1.556 0 1.097-.831 1.433-2.07 1.433-1.556 0-3.457-.911-4.35-2.025-.08-.098-.177-.053-.177.062v2.423c0 .097.01.141.08.22.743.814 2.52 1.53 4.59 1.53 2.546 0 4.456-1.485 4.456-3.784 0-1.787-1.052-2.865-3.625-3.635m10.107-1.76c-1.68 0-2.653 1.026-3.219 2.052V9.376c0-.08-.044-.124-.124-.124h-2.22c-.079 0-.123.044-.123.124V20.72c0 .08.044.124.124.124h2.22c.079 0 .123-.044.123-.124v-4.536c.566 1.025 1.521 2.034 3.237 2.034 2.264 0 3.89-1.955 3.89-4.581s-1.644-4.545-3.908-4.545m-.654 6.986c-1.185 0-2.211-1.167-2.618-2.458.407-1.362 1.344-2.405 2.618-2.405 1.211 0 2.051.92 2.051 2.423s-.84 2.44-2.051 2.44m40.633-6.826h-2.264c-.08 0-.115.017-.15.097l-2.282 5.483-2.29-5.483c-.035-.08-.07-.097-.15-.097h-3.661v-.584c0-.955.645-1.397 1.476-1.397.496 0 1.035.256 1.415.486.089.053.15-.008.115-.088l-.796-1.901a.26.26 0 0 0-.124-.133c-.389-.203-1.025-.38-1.644-.38-1.875 0-2.954 1.432-2.954 3.254v.743h-1.503c-.08 0-.124.044-.124.124v1.768c0 .08.044.124.124.124h1.503v6.668c0 .08.044.123.124.123h2.264c.08 0 .124-.044.124-.123v-6.668h1.936l2.812 6.11-1.512 3.325c-.044.098.009.142.097.142h2.414c.08 0 .116-.018.15-.097l4.997-11.355c.035-.08-.009-.141-.097-.141M54.964 9.04c-2.865 0-4.837 2.025-4.837 4.616 0 2.573 1.971 4.616 4.837 4.616 2.856 0 4.846-2.043 4.846-4.616 0-2.591-1.99-4.616-4.846-4.616m.008 7.065c-1.37 0-2.343-1.043-2.343-2.45 0-1.405.973-2.449 2.343-2.449 1.362 0 2.335 1.043 2.335 2.45 0 1.406-.973 2.45-2.335 2.45m33.541-6.334a1.24 1.24 0 0 0-.483-.471 1.4 1.4 0 0 0-.693-.17q-.384 0-.693.17a1.24 1.24 0 0 0-.484.471q-.174.302-.174.681 0 .375.174.677.175.3.484.471t.693.17.693-.17.483-.471.175-.676q0-.38-.175-.682m-.211 1.247a1 1 0 0 1-.394.39 1.15 1.15 0 0 1-.571.14 1.16 1.16 0 0 1-.576-.14 1 1 0 0 1-.391-.39 1.14 1.14 0 0 1-.14-.566q0-.316.14-.562t.391-.388.576-.14q.32 0 .57.14.253.141.395.39t.142.565q0 .312-.142.56m-19.835-5.78c-.85 0-1.468.6-1.468 1.396s.619 1.397 1.468 1.397c.866 0 1.485-.6 1.485-1.397 0-.796-.619-1.397-1.485-1.397m19.329 5.19a.31.31 0 0 0 .134-.262q0-.168-.132-.266-.132-.099-.381-.099h-.588v1.229h.284v-.489h.154l.374.489h.35l-.41-.518a.5.5 0 0 0 .215-.084m-.424-.109h-.26v-.3h.27q.12 0 .184.036a.12.12 0 0 1 .065.116.12.12 0 0 1-.067.111.4.4 0 0 1-.192.037M69.607 9.252h-2.263c-.08 0-.124.044-.124.124v8.56c0 .08.044.123.124.123h2.263c.08 0 .124-.044.124-.123v-8.56c0-.08-.044-.124-.124-.124m-3.333 6.605a2.1 2.1 0 0 1-1.053.257c-.725 0-1.185-.425-1.185-1.362v-3.484h2.211c.08 0 .124-.044.124-.124V9.376c0-.08-.044-.124-.124-.124h-2.21V6.944c0-.097-.063-.15-.15-.08l-3.954 3.113c-.053.044-.07.088-.07.16v1.007c0 .08.044.124.123.124h1.539v3.855c0 2.087 1.203 3.06 2.918 3.06.743 0 1.46-.194 1.884-.442.062-.035.07-.07.07-.133v-1.68c0-.088-.044-.115-.123-.07"
+                            transform="translate(-0.95,0)"></path>
+                    </svg></a>
+            </li>
+            <li class="web_name">
+                <h3>Spotify</h3>
+            </li>
+            <li class="homelogo"><a href="#"><svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" fill="white"
+                        role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline" viewBox="0 0 24 24">
+                        <path
+                            d="M13.5 1.515a3 3 0 0 0-3 0L3 5.845a2 2 0 0 0-1 1.732V21a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1v-6h4v6a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V7.577a2 2 0 0 0-1-1.732z">
+                        </path>
+                    </svg></a></li>
+            <li class="search-mbl"><svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" data-encore-id="icon"
+                    role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline M9l40ptEBXPm03dU3X1k"
+                    data-testid="search-icon" viewBox="0 0 24 24"
+                    style="--encore-icon-height: var(--encore-graphic-size-decorative-larger-3); --encore-icon-width: var(--encore-graphic-size-decorative-larger-3);">
+                    <path
+                        d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
+                    </path>
+                </svg></li>
+            <li class="search">
+                <div><svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" data-encore-id="icon" role="img"
+                        aria-hidden="true" class="e-91000-icon e-91000-baseline M9l40ptEBXPm03dU3X1k"
+                        data-testid="search-icon" viewBox="0 0 24 24"
+                        style="--encore-icon-height: var(--encore-graphic-size-decorative-larger-3); --encore-icon-width: var(--encore-graphic-size-decorative-larger-3);">
+                        <path
+                            d="M10.533 1.27893C5.35215 1.27893 1.12598 5.41887 1.12598 10.5579C1.12598 15.697 5.35215 19.8369 10.533 19.8369C12.767 19.8369 14.8235 19.0671 16.4402 17.7794L20.7929 22.132C21.1834 22.5226 21.8166 22.5226 22.2071 22.132C22.5976 21.7415 22.5976 21.1083 22.2071 20.7178L17.8634 16.3741C19.1616 14.7849 19.94 12.7634 19.94 10.5579C19.94 5.41887 15.7138 1.27893 10.533 1.27893ZM3.12598 10.5579C3.12598 6.55226 6.42768 3.27893 10.533 3.27893C14.6383 3.27893 17.94 6.55226 17.94 10.5579C17.94 14.5636 14.6383 17.8369 10.533 17.8369C6.42768 17.8369 3.12598 14.5636 3.12598 10.5579Z">
+                        </path>
+                    </svg>
+                </div>
+                <div>
+                    <input type="search" name="search" id="search" placeholder="What do you want to play?">
+                </div>
+                <div class="search_store_svg">
+
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" data-encore-id="icon" role="img"
+                        aria-hidden="true" class="e-91000-icon e-91000-baseline" viewBox="0 0 24 24">
+                        <path d="M15 15.5c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2"></path>
+                        <path
+                            d="M1.513 9.37A1 1 0 0 1 2.291 9h19.418a1 1 0 0 1 .979 1.208l-2.339 11a1 1 0 0 1-.978.792H4.63a1 1 0 0 1-.978-.792l-2.339-11a1 1 0 0 1 .201-.837zM3.525 11l1.913 9h13.123l1.913-9zM4 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v4h-2V3H6v3H4z">
+                        </path>
+                    </svg>
+
+                </div>
+            </li>
+
+        </ul>
+        <ul class="two">
+            <li>
+                <button>
+                    Explore Premium
+                </button>
+            </li>
+            <li class="install">
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" fill="#b3b3b3" role="img"
+                        aria-hidden="true" class="e-91000-icon e-91000-baseline" viewBox="0 0 16 16"
+                        style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                        <path
+                            d="M4.995 8.745a.75.75 0 0 1 1.06 0L7.25 9.939V4a.75.75 0 0 1 1.5 0v5.94l1.195-1.195a.75.75 0 1 1 1.06 1.06L8 12.811l-.528-.528-.005-.005-2.472-2.473a.75.75 0 0 1 0-1.06">
+                        </path>
+                        <path d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13"></path>
+                    </svg>
+                </span>
+                <span class="text">
+                    Install App
+                </span>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="white" data-encore-id="icon" role="img" aria-hidden="true"
+                    class="e-91000-icon e-91000-baseline" viewBox="0 0 16 16"
+                    style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                    <path
+                        d="M8 1.5a4 4 0 0 0-4 4v3.27a.75.75 0 0 1-.1.373L2.255 12h11.49L12.1 9.142a.75.75 0 0 1-.1-.374V5.5a4 4 0 0 0-4-4m-5.5 4a5.5 5.5 0 0 1 11 0v3.067l2.193 3.809a.75.75 0 0 1-.65 1.124H10.5a2.5 2.5 0 0 1-5 0H.957a.75.75 0 0 1-.65-1.124L2.5 8.569zm4.5 8a1 1 0 1 0 2 0z">
+                    </path>
+                </svg>
+            </li>
+            <li>
+                <svg xmlns="http://www.w3.org/2000/svg" data-encore-id="icon" role="img" aria-hidden="true"
+                    class="e-91000-icon e-91000-baseline" viewBox="0 0 16 16"
+                    style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                    <path
+                        d="M3.849 10.034c-.021-.465.026-.93.139-1.381H1.669c.143-.303.375-.556.665-.724l.922-.532a1.63 1.63 0 0 0 .436-2.458 1.8 1.8 0 0 1-.474-1.081q-.014-.287.057-.563a1.12 1.12 0 0 1 .627-.7 1.2 1.2 0 0 1 .944 0q.225.1.392.281c.108.12.188.263.237.417q.074.276.057.561a1.8 1.8 0 0 1-.475 1.084 1.6 1.6 0 0 0-.124 1.9c.36-.388.792-.702 1.272-.927v-.015c.48-.546.768-1.233.821-1.958a3.2 3.2 0 0 0-.135-1.132 2.657 2.657 0 0 0-5.04 0c-.111.367-.157.75-.135 1.133.053.724.341 1.41.821 1.955A.13.13 0 0 1 2.565 6a.13.13 0 0 1-.063.091l-.922.532A3.2 3.2 0 0 0-.004 9.396v.75h3.866c.001-.033-.01-.071-.013-.112m10.568-3.4-.922-.532a.13.13 0 0 1-.064-.091.12.12 0 0 1 .028-.1c.48-.546.768-1.233.821-1.958a3.3 3.3 0 0 0-.135-1.135A2.64 2.64 0 0 0 12.7 1.233a2.67 2.67 0 0 0-3.042.64 2.65 2.65 0 0 0-.554.948c-.11.367-.156.75-.134 1.133.053.724.341 1.41.821 1.955.005.006 0 .011 0 .018.48.225.911.54 1.272.927a1.6 1.6 0 0 0-.125-1.907 1.8 1.8 0 0 1-.474-1.081q-.015-.287.057-.563a1.12 1.12 0 0 1 .627-.7 1.2 1.2 0 0 1 .944 0q.225.1.392.281.162.182.236.413c.05.184.07.375.058.565a1.8 1.8 0 0 1-.475 1.084 1.633 1.633 0 0 0 .438 2.456l.922.532c.29.169.52.421.664.724h-2.319c.113.452.16.918.139 1.383 0 .04-.013.078-.017.117h3.866v-.75a3.2 3.2 0 0 0-1.58-2.778v.004zm-3.625 6-.922-.532a.13.13 0 0 1-.061-.144.1.1 0 0 1 .025-.047 3.33 3.33 0 0 0 .821-1.958 3.2 3.2 0 0 0-.135-1.132 2.657 2.657 0 0 0-5.041 0c-.11.367-.156.75-.134 1.133.053.724.341 1.41.821 1.955a.13.13 0 0 1 .028.106.13.13 0 0 1-.063.091l-.922.532a3.2 3.2 0 0 0-1.584 2.773v.75h8.75v-.75a3.2 3.2 0 0 0-1.583-2.781zm-5.5 2.023c.143-.303.375-.556.665-.724l.922-.532a1.63 1.63 0 0 0 .436-2.458 1.8 1.8 0 0 1-.474-1.081q-.015-.287.057-.563a1.12 1.12 0 0 1 .627-.7 1.2 1.2 0 0 1 .944 0q.225.1.392.281c.108.12.188.263.237.417q.073.276.057.561a1.8 1.8 0 0 1-.475 1.084 1.632 1.632 0 0 0 .438 2.456l.922.532c.29.169.52.421.664.724z">
+                    </path>
+                </svg>
+            </li>
+        </ul>
+        <ul class="three_line"><svg fill="white" class="tes-hamburger" viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg" fit="" preserveAspectRatio="xMidYMid meet" focusable="false">
+                <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" fill-rule="evenodd"></path>
+            </svg></ul>
+
+    </header>
+
+    <!--  main  -->
+    <section class="section1 flex">
+        <aside>
+            <ul class="head">
+                <div class="left-library">
+                    <li>
+                        <h1><span class="library">Your Library</span></h1>
+
+                    </li>
+                </div>
+                <div class="right-library">
+                    <li class="btn1">
+                        <button title="Create a playlist,folder,or Jam"><span><svg xmlns="http://www.w3.org/2000/svg"
+                                    fill=" #b3b3b3" data-encore-id="icon" role="img" aria-hidden="true"
+                                    class="e-91000-icon e-91000-baseline gPxvvwdrTY6FbTx3mvl1" viewBox="0 0 16 16"
+                                    style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                                    <path
+                                        d="M15.25 8a.75.75 0 0 1-.75.75H8.75v5.75a.75.75 0 0 1-1.5 0V8.75H1.5a.75.75 0 0 1 0-1.5h5.75V1.5a.75.75 0 0 1 1.5 0v5.75h5.75a.75.75 0 0 1 .75.75">
+                                    </path>
+                                </svg></span>Create<span></span></button>
+                    </li>
+                    <li class="btn2 cross_btn">
+                        <button><svg width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18 6 L6 18 M6 6 L18 18" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+
+                            </svg></button>
+                    </li>
+                </div>
+            </ul>
+            <ul class="sec-head ">
+                <li>
+                    <button>Playlist</button>
+                    <button>Artists</button>
+                </li>
+            </ul>
+            <div class="scrollbar">
+                <ul class="card">
+                    <!-- Js Used here  -->
+                </ul>
+                <ol class="artist_list">
+                    <h1>ARTIST NAMES : </h1>
+                    <li>Arijit Singh, Palak Muchhal</li>
+                    <li>Lata Mangeshkar</li>
+                    <li>Humaira Arshad, Abdullah Siddiqui</li>
+                    <li>Kishore Kumar</li>
+                    <li>Kaifi Khalil</li>
+                    <li>Jubin Nautiyal</li>
+                </ol>
+            </div>
+        </aside>
+        <main>
+            <div class="buttons">
+                <button class="side-icon btn">
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="#b3b3b3" data-encore-id="icon" role="img"
+                            aria-hidden="true" class="e-91000-icon e-91000-baseline e-91000-icon--auto-mirror"
+                            viewBox="0 0 16 16"
+                            style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                            <path
+                                d="M10.97 5.47a.75.75 0 1 1 1.06 1.06L10.56 8l1.47 1.47a.75.75 0 1 1-1.06 1.06l-2-2a.75.75 0 0 1 0-1.06z">
+                            </path>
+                            <path
+                                d="M1 0a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm.5 1.5H5v13H1.5zm13 13h-8v-13h8z">
+                            </path>
+                        </svg>
+                    </span>
+                    <span>
+                        Library
+                    </span>
+                </button>
+                <button class="btn" id="all">ALL</button>
+                <button class="btn" id="music">Music</button>
+            </div>
+            <ul class="music">
+                <li>Song name: Aj koi bat ho gai.mp3</li>
+                <li>Song name: Nusrat Fateh Ali Khan Mahsup.mp3</li>
+                <li>Song name: SAADGI TOH HAMARI (REMIX) - NUSRAT FATEH ALI KHAN X VIBRONO - Vibrono.mp3</li>
+                <li>Song name: Saanson ki maala pe by NFAK.mp3</li>
+                <li>Song name: UNKI TARAF SE - NUSRAT FATEH ALI KHAN X VIBRONO EXTENDED VERSION - Vibrono.mp3</li>
+
+            </ul>
+           
+            <div class="All">
+
+                <div class="recently">
+                    <h1>Recently Played </h1>
+                </div>
+                <div class="song-cards">
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img1.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Aj koi bat ho gai</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img2.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Nusrat Fateh Ali Khan Mahsup</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img3.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>SAADGI TOH HAMARI (REMIX) - NUSRAT FATEH ALI KHAN X VIBRONO - Vibrono</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img4.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Saanson ki maala pe by NFAK</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img5.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>UNKI TARAF SE - NUSRAT FATEH ALI KHAN X VIBRONO EXTENDED VERSION - Vibrono</p>
+                    </div>
+                </div>
+                <div class="recently">
+                    <h1>Recommended for today </h1>
+                </div>
+                <div class="song-cards">
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img1.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Afusic - Pal Pal (Official Music Video) Prod. AliSoomroMusic - AFUSIC</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img2.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p> Itna Na Mujhse Tu Pyaar Badha</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img3.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Jhol Coke Studio Pakistan</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img4.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Jisko Jo Bhi Milta Hai Bayaan Asfar Hussain Nahin Milta Sabko Sab Nahi Milta Tanim Zayden</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img5.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Kaifi Khalil - Kahani Suno 2.0 Kaifi Khalil</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img6.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Zaya sapne zaya apne</p>
+                    </div>
+
+                </div>
+                <div class="recently">
+                    <h1>Most Popular </h1>
+                </div>
+                <div class="song-cards">
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img1.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Aj koi bat ho gai</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img2.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Nusrat Fateh Ali Khan Mahsup</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img3.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>SAADGI TOH HAMARI (REMIX) - NUSRAT FATEH ALI KHAN X VIBRONO - Vibrono</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img4.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Saanson ki maala pe by NFAK</p>
+                    </div>
+                    <div class="r-card" data-folder="NFAK">
+                        <div class="r-img r1-card">
+                            <img src="assits/NFAK/img5.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>UNKI TARAF SE - NUSRAT FATEH ALI KHAN X VIBRONO EXTENDED VERSION - Vibrono</p>
+                    </div>
+                </div>
+                <div class="recently">
+                    <h1>Popular albums and Singles</h1>
+                </div>
+                <div class="song-cards">
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img1.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Afusic - Pal Pal (Official Music Video) Prod. AliSoomroMusic - AFUSIC</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img2.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p> Itna Na Mujhse Tu Pyaar Badha</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img3.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Jhol Coke Studio Pakistan</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img4.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Jisko Jo Bhi Milta Hai Bayaan Asfar Hussain Nahin Milta Sabko Sab Nahi Milta Tanim Zayden</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img5.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Kaifi Khalil - Kahani Suno 2.0 Kaifi Khalil</p>
+                    </div>
+                    <div class="r-card" data-folder="Popular">
+                        <div class="r-img r1-card">
+                            <img src="assits/Popular/img6.jpeg" alt="song" />
+
+                            <!-- Play Button inside image box -->
+                            <div class="playbtn">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                    <path d="M5 3.5v17l14-8.5-14-8.5z">
+                                    </path>
+                                </svg>
+                            </div>
+                        </div>
+                        <p>Zaya sapne zaya apne</p>
+                    </div>
+
+                </div>
+            </div>
+        </main>
+    </section>
+    <footer>
+        <div class="control_sec">
+            <div class="songinfo">
+                <marquee behavior="scroll" direction="right" loop=""></marquee>
+            </div>
+            <div class="allcontrol">
+                <div class=" control" id="back" title="Previous">
+                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline"
+                        viewBox="0 0 16 16"
+                        style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                        <path
+                            d="M3.3 1a.7.7 0 0 1 .7.7v5.15l9.95-5.744a.7.7 0 0 1 1.05.606v12.575a.7.7 0 0 1-1.05.607L4 9.149V14.3a.7.7 0 0 1-.7.7H1.7a.7.7 0 0 1-.7-.7V1.7a.7.7 0 0 1 .7-.7z">
+                        </path>
+                    </svg>
+                </div>
+                <div class="control" id="play" title="Play">
+                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline"
+                        viewBox="0 0 16 16"
+                        style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                        <path
+                            d="M3 1.713a.7.7 0 0 1 1.05-.607l10.89 6.288a.7.7 0 0 1 0 1.212L4.05 14.894A.7.7 0 0 1 3 14.288z">
+                        </path>
+                    </svg>
+                </div>
+                <div class=" control" id="next" title="Next">
+                    <svg data-encore-id="icon" role="img" aria-hidden="true" class="e-91000-icon e-91000-baseline"
+                        viewBox="0 0 16 16"
+                        style="--encore-icon-height: var(--encore-graphic-size-decorative-smaller); --encore-icon-width: var(--encore-graphic-size-decorative-smaller);">
+                        <path
+                            d="M12.7 1a.7.7 0 0 0-.7.7v5.15L2.05 1.107A.7.7 0 0 0 1 1.712v12.575a.7.7 0 0 0 1.05.607L12 9.149V14.3a.7.7 0 0 0 .7.7h1.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+            <div class="song_time_and_vol">
+                <div class="songtime">
+                </div>
+                <div class="song_vol">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"
+                            color="#f0f0f0" fill="none">
+                            <path
+                                d="M14 14.8135V9.18646C14 6.04126 14 4.46866 13.0747 4.0773C12.1494 3.68593 11.0603 4.79793 8.88232 7.02192C7.75439 8.17365 7.11085 8.42869 5.50604 8.42869C4.10257 8.42869 3.40084 8.42869 2.89675 8.77262C1.85035 9.48655 2.00852 10.882 2.00852 12C2.00852 13.118 1.85035 14.5134 2.89675 15.2274C3.40084 15.5713 4.10257 15.5713 5.50604 15.5713C7.11085 15.5713 7.75439 15.8264 8.88232 16.9781C11.0603 19.2021 12.1494 20.3141 13.0747 19.9227C14 19.5313 14 17.9587 14 14.8135Z"
+                                stroke="#f0f0f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M17 9C17.6254 9.81968 18 10.8634 18 12C18 13.1366 17.6254 14.1803 17 15"
+                                stroke="#f0f0f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                            <path d="M20 7C21.2508 8.36613 22 10.1057 22 12C22 13.8943 21.2508 15.6339 20 17"
+                                stroke="#f0f0f0" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            </path>
+                        </svg>
+                    </div>
+                    <div>
+                        <input class="range" type="range" name="volume" id="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="seekbar">
+            <div class="circle"></div>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
