@@ -1,4 +1,3 @@
-
 let currentsong = new Audio();
 let curfolder;
 let songs;
@@ -333,6 +332,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
