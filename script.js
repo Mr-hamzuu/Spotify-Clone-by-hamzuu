@@ -46,7 +46,7 @@ async function getsong(folder) {
 
 
     curfolder = folder;
-    console.log("folder : ",folder);
+  
     let a = await fetch(`./Spotify-Clone-by-hamzuu/
 /song/${folder.toLowerCase()}/`)
     let response = await a.text()
@@ -335,6 +335,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
