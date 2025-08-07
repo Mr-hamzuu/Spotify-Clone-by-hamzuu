@@ -1,10 +1,16 @@
 {
-  "rewrites": [
+  "version": 2,
+  "public": true,
+  "builds": [
     {
-      "source": "public/songs/(.*).mp3",
-      "headers": [
-        { "key": "Content-Type", "value": "audio/mpeg" }
-      ]
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
     }
   ]
 }
