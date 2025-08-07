@@ -1,7 +1,7 @@
 {
-  "headers": [
+  "rewrites": [
     {
-      "source": "/songs/(.*).mp3",
+      "source": "public/songs/(.*).mp3",
       "headers": [
         { "key": "Content-Type", "value": "audio/mpeg" }
       ]
