@@ -45,11 +45,14 @@ function convertToMMSS(seconds) {
 
 async function getsong(folder) {
 
-
+try{
     curfolder = folder;
     let a = await fetch(`/song/${folder.toLowerCase()}/`)
     let response = await a.text()
-
+    }catch (error) {
+        console.error('Error fetching songs:', error);
+        return [];
+    }
     let div = document.createElement('div')
     div.innerHTML = response;
     let as = div.getElementsByTagName('a');
@@ -332,6 +335,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
