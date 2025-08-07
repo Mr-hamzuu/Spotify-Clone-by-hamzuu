@@ -47,8 +47,7 @@ async function getsong(folder) {
 
     curfolder = folder;
   
-    let a = await fetch(`./Spotify-Clone-by-hamzuu/
-/song/${folder.toLowerCase()}/`)
+    let a = await fetch(`https://mr-hamzuu.github.io/Spotify-Clone-by-hamzuu/song/${folder.toLowerCase()}/`)
     let response = await a.text()
   
     let div = document.createElement('div')
@@ -112,8 +111,7 @@ async function getsong(folder) {
 
 // Pic portion
 async function picsreturn(images) {
-    let pics = await fetch(`./Spotify-Clone-by-hamzuu/
-/assits/${images.toLowerCase()}/`)
+    let pics = await fetch(`https://mr-hamzuu.github.io/Spotify-Clone-by-hamzuu/assits/${images.toLowerCase()}/`)
     let picsreponse = await pics.text()
     let divpic = document.createElement('div')
     divpic.innerHTML = picsreponse;
@@ -335,6 +333,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
