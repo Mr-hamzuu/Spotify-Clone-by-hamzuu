@@ -1,0 +1,65 @@
+{
+  "nfak": {
+    "songs": [
+      {
+        "title": "Aj koi bat ho gai",
+        "file": "/song/nfak/Aj koi bat ho gai.mp3",
+        "image": "/assits/nfak/img1.jpeg"
+      },
+      {
+        "title": "IN AANKHON KI MASTI (REMIX) - ASHA BHOSLE X VIBRONO INSTAGRAM VIRAL - Vibrono",
+        "file": "/song/nfak/IN AANKHON KI MASTI (REMIX) - ASHA BHOSLE X VIBRONO INSTAGRAM VIRAL - Vibrono.mp3",
+        "image": "/assits/nfak/img2.jpeg"
+      },
+      {
+        "title": "SAADGI TOH HAMARI (REMIX) - NUSRAT FATEH ALI KHAN X VIBRONO - Vibrono",
+        "file": "/song/nfak/SAADGI TOH HAMARI (REMIX) - NUSRAT FATEH ALI KHAN X VIBRONO - Vibrono.mp3",
+        "image": "/assits/nfak/img3.jpeg"
+      },
+      {
+        "title": "Saanson ki maala pe by NFAK",
+        "file": "/song/nfak/Saanson ki maala pe by NFAK.mp3",
+        "image": "/assits/nfak/img4.jpeg"
+      },
+      {
+        "title": "UNKI TARAF SE - NUSRAT FATEH ALI KHAN X VIBRONO EXTENDED VERSION - Vibrono",
+        "file": "/song/nfak/UNKI TARAF SE - NUSRAT FATEH ALI KHAN X VIBRONO EXTENDED VERSION - Vibrono.mp3",
+        "image": "/assits/nfak/img5.jpeg"
+      }
+    ]
+  },
+  "popular": {
+    "songs": [
+      {
+        "title": "Afusic - Pal Pal (Official Music Video) Prod. AliSoomroMusic - AFUSIC",
+        "file": "/song/popular/Afusic - Pal Pal (Official Music Video) Prod. AliSoomroMusic - AFUSIC.mp3",
+        "image": "/assits/popular/img1.jpeg"
+      },
+      {
+        "title": "Itna Na Mujhse Tu Pyaar Badha",
+        "file": "/song/popular/Itna Na Mujhse Tu Pyaar Badha.mp3",
+        "image": "/assits/popular/img2.jpeg"
+      },
+      {
+        "title": "Jhol Coke Studio Pakistan",
+        "file": "/song/popular/Jhol Coke Studio Pakistan .mp3",
+        "image": "/assits/popular/img3.jpeg"
+      },
+      {
+        "title": "Jisko Jo Bhi Milta Hai Bayaan Asfar Hussain Nahin Milta Sabko Sab Nahi Milta Tanim Zayden",
+        "file": "/song/popular/Jisko Jo Bhi Milta Hai Bayaan Asfar Hussain Nahin Milta Sabko Sab Nahi Milta Tanim Zayden.mp3",
+        "image": "/assits/popular/img4.jpeg"
+      },
+      {
+        "title": "Kaifi Khalil - Kahani Suno 2.0 Kaifi Khalil",
+        "file": "/song/popular/Kaifi Khalil - Kahani Suno 2.0 Kaifi Khalil.mp3",
+        "image": "/assits/popular/img5.jpeg"
+      },
+      {
+        "title": "Zaya sapne zaya apne",
+        "file": "/song/popular/Zaya sapne zaya apne .mp3",
+        "image": "/assits/popular/img6.jpeg"
+      }
+    ]
+  }
+}
