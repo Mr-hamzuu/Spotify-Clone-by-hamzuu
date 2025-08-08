@@ -47,7 +47,7 @@ async function getsong(folder) {
 
     curfolder = folder;
   
-    let a = await fetch(`./public/song/${folder.toLowerCase()}/`)
+    let a = await fetch(`./song/${folder.toLowerCase()}/`)
     let response = await a.text()
   
     let div = document.createElement('div')
@@ -116,7 +116,7 @@ async function getsong(folder) {
 
 // Pic portion
 async function picsreturn(images) {
-    let pics = await fetch(`./public/assits/${images.toLowerCase()}/`)
+    let pics = await fetch(`./assits/${images.toLowerCase()}/`)
     let picsreponse = await pics.text()
     let divpic = document.createElement('div')
     divpic.innerHTML = picsreponse;
@@ -346,6 +346,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
