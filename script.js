@@ -47,7 +47,7 @@ async function getsong(folder) {
 
     curfolder = folder;
   
-    let a = await fetch(`./song/Aj koi bat ho gai.mp3`)
+    let a = await fetch(`./song/${folder.lowercase()}/`)
     let response = await a.text()
   
     let div = document.createElement('div')
@@ -346,6 +346,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
