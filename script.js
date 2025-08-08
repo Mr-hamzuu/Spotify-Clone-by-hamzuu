@@ -1,6 +1,6 @@
 let currentsong = new Audio();
-// let curfolder;
-// let songs;
+let curfolder;
+let songs;
 let song;
 let pics; // Declare pics globally so it's accessible in getsong and main
 let playbtn = document.querySelectorAll(".r-card")
@@ -42,189 +42,131 @@ function convertToMMSS(seconds) {
 
 
 
-// async function getsong(folder) {
-
-
-//     curfolder = folder;
-  
-//     let a = await fetch(`./public/song/${folder.toLowerCase()}/`)
-//     let response = await a.text()
-  
-//     let div = document.createElement('div')
-//     div.innerHTML = response;
-//     let as = div.getElementsByTagName('a');
-//     song = [];
-
-//     for (let index = 0; index < as.length; index++) {
-//         const element = as[index].href;
-//         if (element.endsWith('.mp3')) {
-//             song.push(element.split(`/${folder}/`)[1]);
-//         }
-//     }
-//     songs = song; // <-- Add this line to update the global songs variable
-//     const artists = [
-//         "Arijit Singh, Palak Muchhal",
-//         "Lata Mangeshkar",
-//         "Humaira Arshad, Abdullah Siddiqui",
-//         "Kishore Kumar",
-//         "Kaifi Khalil",
-//         "Jubin Nautiyal"
-//     ];
-//     let title = document.querySelector('.scrollbar').getElementsByTagName('ul')[0];
-//     title.innerHTML = "";
-//     if (songs && pics) {
-//         for (let s = 0; s < songs.length; s++) {
-//             if (pics[s]) {
-//                 title.innerHTML += `<li>
-//                <img src="${pics[s]}" alt="">
-//                <div class="info">
-//                <div>Song name:  ${songs[s].replaceAll("%20", " ")}</div>
-//                <div>Artist name: ${artists[s]}</div>
-//                </div>
-//                </li>`;
-//             }
-//         }
-//     }
-
-//     let defaultcolor = null;
-
-//     Array.from(document.querySelector(".scrollbar").getElementsByTagName("li")).forEach((e) => {
-//         e.addEventListener("click", () => {
-
-//             console.log(e.querySelector(".info").firstElementChild.innerHTML.split(": ")[1]);
-//             playmusic(e.querySelector(".info").firstElementChild.innerHTML.split(": ")[1].trim())
-//             console.log(e);
-
-//             if (defaultcolor) {
-//                 defaultcolor.querySelector(".info").firstElementChild.style.color = ""
-//             }
-//             e.querySelector(".info").firstElementChild.style.color = "#1db954";
-//             defaultcolor = e
-//             play.querySelector("svg path").setAttribute("d", "M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7z");
-//         })
-//     });
-
-
-//     return song;
-// }
-
-
-let songs = [];
-let curfolder = null;
-
-// Load songs for a folder from JSON
 async function getsong(folder) {
+
+
     curfolder = folder;
+  
+    let a = await fetch(`./public/song/${folder.toLowerCase()}/`)
+    let response = await a.text()
+  
+    let div = document.createElement('div')
+    div.innerHTML = response;
+    let as = div.getElementsByTagName('a');
+    song = [];
 
-    const res = await fetch("/data.json"); // Make sure this file is in /public
-    const data = await res.json();
-
-    if (!data[folder] || !data[folder].songs) {
-        console.error(`No data found for folder: ${folder}`);
-        return [];
+    for (let index = 0; index < as.length; index++) {
+        const element = as[index].href;
+        if (element.endsWith('.mp3')) {
+            song.push(element.split(`/${folder}/`)[1]);
+        }
+    }
+    songs = song; // <-- Add this line to update the global songs variable
+    const artists = [
+        "Arijit Singh, Palak Muchhal",
+        "Lata Mangeshkar",
+        "Humaira Arshad, Abdullah Siddiqui",
+        "Kishore Kumar",
+        "Kaifi Khalil",
+        "Jubin Nautiyal"
+    ];
+    let title = document.querySelector('.scrollbar').getElementsByTagName('ul')[0];
+    title.innerHTML = "";
+    if (songs && pics) {
+        for (let s = 0; s < songs.length; s++) {
+            if (pics[s]) {
+                title.innerHTML += `<li>
+               <img src="${pics[s]}" alt="">
+               <div class="info">
+               <div>Song name:  ${songs[s].replaceAll("%20", " ")}</div>
+               <div>Artist name: ${artists[s]}</div>
+               </div>
+               </li>`;
+            }
+        }
     }
 
-    songs = data[folder].songs; // Directly store array of song objects
-
-    let title = document.querySelector('.scrollbar ul');
-    title.innerHTML = "";
-
-    // Render song list
-    songs.forEach((songObj, index) => {
-        title.innerHTML += `
-            <li>
-                <img src="${songObj.image}" alt="">
-                <div class="info">
-                    <div>Song name: ${songObj.title}</div>
-                </div>
-            </li>
-        `;
-    });
-
-    // Add click listeners
     let defaultcolor = null;
-    Array.from(title.getElementsByTagName("li")).forEach((e, i) => {
+
+    Array.from(document.querySelector(".scrollbar").getElementsByTagName("li")).forEach((e) => {
         e.addEventListener("click", () => {
-            playmusic(songs[i].file); // Pass file path directly
+
+            console.log(e.querySelector(".info").firstElementChild.innerHTML.split(": ")[1]);
+            playmusic(e.querySelector(".info").firstElementChild.innerHTML.split(": ")[1].trim())
+            console.log(e);
+
             if (defaultcolor) {
-                defaultcolor.querySelector(".info").firstElementChild.style.color = "";
+                defaultcolor.querySelector(".info").firstElementChild.style.color = ""
             }
             e.querySelector(".info").firstElementChild.style.color = "#1db954";
-            defaultcolor = e;
-        });
+            defaultcolor = e
+            play.querySelector("svg path").setAttribute("d", "M2.7 1a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7zm8 0a.7.7 0 0 0-.7.7v12.6a.7.7 0 0 0 .7.7h2.6a.7.7 0 0 0 .7-.7V1.7a.7.7 0 0 0-.7-.7z");
+        })
     });
 
-    return songs;
+
+    return song;
 }
+
+
+
 
 
 
 
 // Pic portion
-// async function picsreturn(images) {
-//     let pics = await fetch(`./public/assits/${images.toLowerCase()}/`)
-//     let picsreponse = await pics.text()
-//     let divpic = document.createElement('div')
-//     divpic.innerHTML = picsreponse;
+async function picsreturn(images) {
+    let pics = await fetch(`./public/assits/${images.toLowerCase()}/`)
+    let picsreponse = await pics.text()
+    let divpic = document.createElement('div')
+    divpic.innerHTML = picsreponse;
 
 
-//     let img = divpic.getElementsByTagName('a');
-//     let picarray = []
-//     for (let index = 0; index < img.length; index++) {
-//         const element = img[index].href;
-//         if (element.endsWith(".jpeg")) {
-//             picarray.push(new URL(element).pathname)
+    let img = divpic.getElementsByTagName('a');
+    let picarray = []
+    for (let index = 0; index < img.length; index++) {
+        const element = img[index].href;
+        if (element.endsWith(".jpeg")) {
+            picarray.push(new URL(element).pathname)
 
-//         }
-//     }
-//     // console.log(picarray);
+        }
+    }
+    // console.log(picarray);
 
-//     return picarray;
-// }
-
-
-
-async function picsreturn(folder) {
-    const res = await fetch("/data.json");
-    const data = await res.json();
-
-    if (!data[folder] || !data[folder].songs) return [];
-    return data[folder].songs.map(song => song.image);
+    return picarray;
 }
 
 
 
-// let playmusic = (track, paused = false) => {
-//     currentsong.src = `song/${curfolder}/` + decodeURI(track)
-
-//     if (!paused) {
-
-//         currentsong.play().catch((error) => {
-//             console.error("The error is :", error)
-
-//         })
-
-//     }
-
-//     document.querySelector(".songinfo marquee").innerHTML = decodeURI(track);
-//     document.querySelector(".songtime ").innerHTML = "00:00 / 00:00";
 
 
-// }
 
 
-function playmusic(filePath, pause = false) {
-    let audio = new Audio(filePath);
-    audio.play();
-    if (pause) audio.pause();
+let playmusic = (track, paused = false) => {
+    currentsong.src = `song/${curfolder}/` + decodeURI(track)
+
+    if (!paused) {
+
+        currentsong.play().catch((error) => {
+            console.error("The error is :", error)
+
+        })
+
+    }
+
+    document.querySelector(".songinfo marquee").innerHTML = decodeURI(track);
+    document.querySelector(".songtime ").innerHTML = "00:00 / 00:00";
+
+
 }
+
 
 
 
 async function main() {
     pics = await picsreturn("nfak");
     songs = await getsong("nfak");
-    playmusic(songs[0].file, true)
+    playmusic(songs[0], true)
 
 
     try {
@@ -404,6 +346,7 @@ async function main() {
     })
 }
 main();
+
 
 
 
